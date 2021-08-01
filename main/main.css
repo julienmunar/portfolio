@@ -1,0 +1,366 @@
+body{
+    background-color:white ;
+}
+
+
+/* NAVBAR CSS */
+
+section#navigation-bar
+{
+    background-color: #263F53;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+section#navigation-bar .nav-link
+{
+    color: white;
+}
+
+/* SECTION HERO */
+section#hero
+{
+    background-color:#263F53;
+    height: 30em;
+  
+}
+
+section#hero .content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 0 auto;
+    padding-top: 3em;
+}
+section#hero .content .profile_img
+{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 100px;
+    
+}
+
+section#hero .content h1
+{
+    
+   color: white;
+   font-size: 6em;
+   letter-spacing: .1em;
+   font-weight: bold;
+}
+
+section#hero .sub-content
+{
+     
+   text-align: center;
+}
+
+section#hero .sub-content h3
+{
+   margin-top: 40px; 
+   color: white;
+   font-size: 2em;
+   letter-spacing: .1em;
+}
+
+
+section#hero .sub-content p
+{
+    margin-top: 20px;
+   color: white;
+   font-size: 16px;
+}
+
+
+/* PROJECT-WRAPPER*/
+section#container .project-about-container 
+{
+background-color: #E5E5E5;
+padding-left: 10em;
+padding-right: 10em;
+padding-bottom: 3em;
+}
+
+section#container .project-about-container h3
+{
+padding-top: 1.5em;
+
+}
+section#container .project-about-container .project--wrapper
+{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr ;
+gap:2em;
+margin-top: 2em;
+
+}
+section#container .project-about-container .project--wrapper  .project--column
+{
+
+}
+
+
+section#container .project-about-container .project--wrapper .project--column .project--body
+{
+ background-color: white;
+  font-size: 1.5em;
+  text-align: center;
+  padding:0.5em;
+}
+
+section#container .project-about-container  .project--wrapper .project--column img
+{
+
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ABOUT WRAPPER */
+section#container .project-about-container  .about--wrapper
+{
+    margin-top: 5em;
+
+
+}
+
+
+
+section#container .project-about-container .about--wrapper h5
+{
+    font-size: 2em;
+    
+}
+
+/* SKILLS WRAPPER */
+
+section#container .skills--wrapper
+{
+    background-color: white;
+    height: 50em;
+   
+    
+
+}
+
+section#container .skills--wrapper .margin-container
+{
+    padding-top: 3em;
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
+section#container .skills--wrapper .margin-container .titre
+{
+
+ margin-bottom: 1em;
+ font-size: 2.4em;
+}
+
+section#container .skills--wrapper .margin-container .skills-techno-container
+{
+
+    
+}
+
+section#container .skills--wrapper .margin-container .skills-techno-container .skills
+{
+
+   font-size: 1.5em;
+   display:flex;
+   flex-direction: row;
+   justify-items: center;
+   
+ }
+ 
+
+ section#container .skills--wrapper .margin-container .skills-techno-container .skills .skills-title
+{
+
+ margin: 0px;
+ 
+ }
+
+ section#container .skills--wrapper .margin-container .skills-techno-container  .skill-descr
+ {
+
+font-size: 17px;
+text-align: justify;
+text-justify: inter-word;
+margin-bottom: 2em;
+ }
+
+ section#container .skills--wrapper .margin-container .skills-techno-container .skills i
+ {
+    padding-top: 10px;
+  margin-right: 0.2em;
+  
+  }
+
+  section#container .skills--wrapper .margin-container .skills-techno-container .skills img
+  {
+  height: 50px;;
+   
+   }
+
+  /* TECHNO WRAPPER */
+section#container .techno--wrapper
+{
+    margin-top: 4em;
+display: flex;
+justify-content: space-between;
+gap: 1em;
+margin-bottom: 3em;
+height: 8em;
+width: 100%;
+}
+
+section#container .techno--wrapper .techno-colum
+{
+border-radius: 15px;
+width: 10em;
+height: 3em;
+background-color:#C1F0FF;
+display:flex;
+flex-direction: column;
+text-align: center;
+justify-content: center;
+
+}
+
+section#container .techno--wrapper .techno-colum p
+{
+margin: 0 auto;
+}
+section#container .form-section
+{
+    background-color:#E5E5E5;
+    height: 40vh;
+}
+
+/*  ---------------------------------------------- RESPONSIVE ---------------------------------------------- */
+
+
+
+/* ######RESPONSIVE 800 PX #######*/
+@media (max-width:800px){
+
+
+/* PROJECT-WRAPPER*/
+section#container .project-about-container 
+{
+background-color: #E5E5E5;
+padding-left: 3em;
+padding-right: 3em;
+padding-bottom: 3em;
+}
+
+/* SKILLS WRAPPER */
+section#container .skills--wrapper
+{
+    background-color: white;
+    height: 55em;
+}
+
+section#container .skills--wrapper .margin-container
+{
+    padding-top: 3em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+
+    }
+
+
+/* ######RESPONSIVE 600 PX #######*/
+@media (max-width:600px){
+
+/* SECTION HERO */
+section#hero
+{
+    height: 45em;
+  }
+section#hero .content
+{
+    display: flex;
+    flex-direction: column;
+}
+/* PROJECT-WRAPPER*/
+section#container .project-about-container 
+{
+background-color: #E5E5E5;
+padding-left: 3em;
+padding-right: 3em;
+padding-bottom: 3em;
+}
+section#container .project-about-container .project--wrapper
+{
+display: grid;
+grid-template-columns: 1fr;
+gap:2em;
+margin-top: 2em;
+
+}
+
+/* SKILLS WRAPPER */
+
+section#container .skills--wrapper
+{
+    background-color: white;
+    height: 70em;
+}
+
+section#container .skills--wrapper .margin-container
+{
+    padding-top: 3em;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+
+    }
+
+/* ######RESPONSIVE 400 PX #######*/
+@media (max-width:400px){
+
+    /* SECTION HERO */
+    section#hero
+    {
+        height: 37em;
+      }
+    section#hero .content
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section#hero .content h1
+    {
+       
+    font-size: 3em;
+    }
+    
+    /* PROJECT-WRAPPER*/
+    section#container .project-about-container 
+    {
+    padding-left: 2em;
+    padding-right: 2em;
+    }
+    section#container .skills--wrapper .margin-container
+{
+    padding-top: 3em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+
+    }
+    
+
+
+

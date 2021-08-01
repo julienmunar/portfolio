@@ -1,0 +1,68 @@
+
+<!-- NAVBAR -->
+   <section id="navigation-bar">
+       
+        <div class="link-bar">
+            <a class="nav-link" href="{%url 'home'%}">
+                Projects
+            </a>
+
+            <a class="nav-link" href="#">
+                Courses
+            </a>
+
+            <a class="nav-link" href="#">
+                Contact
+            </a>
+
+            {% if user.is_authenticated %}
+            <a class="nav-link" href={% url 'addProject'%}>
+                Add a Project
+            </a>
+            {% endif %}
+
+        </div>
+
+        <div class="login-logout-bar">
+            {% if user.is_authenticated %}
+            <a class="btn btn-outline-secondary" href="{% url 'user_logout'%}">logout</a>
+            {% else %}
+            <a class="btn btn-outline-primary" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">login </a>
+            
+            {% endif%}
+         
+        </div>
+   </section>
+
+   <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+            <div class="Login_Window">
+                <div class="module form-module">
+                    <div class="mb-3">      
+                        <form method="post">
+                         {% csrf_token %}
+                            <label for="input-username" class="form-label">Username</label>
+                            <input label="Username" type="text" class="form-control" name="username" placeholder="Utilisateur">
+                            <label for="input-password" class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Mot de passe">
+                            <hr>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+ </div>
+</div>
+
+

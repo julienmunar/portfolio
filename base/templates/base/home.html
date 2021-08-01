@@ -1,0 +1,110 @@
+{% extends 'base/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- HERO -->
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}}">
+        {{ message }}
+    {%endfor%}    
+    {%endif%}  
+    
+    </div>
+    
+   <section id="hero">
+        <div class="content">
+            <img class="profile_img" src="{% static 'images/photo_profil.jpg' %}" alt="photo_profil">
+            <h1>Julien <br> Munar</h1>
+        </div>
+        <div class="sub-content">
+            <h3>Network & Full Stack Developper </h3>
+            <p>I like learning Technical Topic, teach Cooking :)</p>
+        </div>
+      
+   </section>
+<!-- CONTAINER PRINCIPAL -->
+   <section id="container">
+       <!-- MY PROJECTS -->
+    <div class="project-about-container">
+        <h3>My Projects</h3>
+            <div class="project--wrapper">
+            {% for project in projects  %}
+                   <div class="project--column">
+                   <a href = "{% url 'project' project.id %}">
+                    <img src="{{project.thumbnail.url}}" alt="{{project.thumbnail.name}}">
+                    </a>
+                    <div class="project--body">
+                        <p>{{project.title}}</p>
+                    </div>
+                </div>
+            {%empty%} 
+                <h3>No project into the database</h3>   
+            {% endfor  %}
+                
+            </div>
+            <!-- ABOUT -->
+        <div class="about--wrapper">
+            <h5>More About Me
+            </h5>
+            <p> partir de 1090€ frais et commission de souscription inclus. En zone euro. Objectif de 6% de rendement (non garanti) dépassé depuis 2012. Chat disponible. Revenu potentiel mensuel. Plan Epargne Immobilier. Versements programmés. Conseiller dédié.</p>
+        </div>
+    </div>
+
+    <!-- MY SKILLS -->
+    <div class="skills--wrapper">
+        <div class="margin-container">
+            <p class="titre" >My Skills</p> 
+            <div class="skills-techno-container">
+                <div class="skills--row">
+                {% for skill in skills %}
+                    <div class="skills">
+                        <i class="{{skill.fonticon}}"></i>
+                        <p class="skills-title">{{skill.title}}</p>
+                    </div>
+                    <p class="skill-descr"> {{skill.body}}</p>
+                {% endfor %}
+                                        
+                    <div class="skills">
+                        <img src="{% static 'images/ccie.png' %}" alt="ccie">
+                        <p>Cisco R&S, UC </p>
+                    </div>
+                    <p class="skill-descr"> From now more than 10 years, I'm nurced by Cisco Technologies being CCIE#51375, supporting, designing and implementing  UC, Campus, and Datacenter Architectures</p>
+        
+                </div>
+            </div>            
+            <!-- MY TECHNO -->
+            <div class="techno--wrapper">
+                <div class="techno-colum">
+                    <p>Django</p>
+                </div>
+
+                <div class="techno-colum">
+                    <p>React JS</p>
+                </div>
+        
+                <div class="techno-colum">
+                    <p>Git Hub</p>
+                </div>
+                <div class="techno-colum">
+                    <p>Heroku</p>
+                </div>
+                <div class="techno-colum">
+                    <p>Adobe </p>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <!-- SECTION FORM  -->
+    <div class="form-section">
+
+    </div>
+   </section>
+
+
+    
+</div>
+</section>
+
+{% endblock content %}

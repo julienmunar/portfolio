@@ -1,0 +1,20 @@
+{% extends 'base/main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container--projectdisplay" >
+<img class="image--projectdisplay" src="{{project.thumbnail.url}}" alt="{{project.thumbnail.name}}">
+
+<h1>{{project.title}}</h1>
+{%if user.is_authenticated %}
+<a class = "btn btn-warning" href="{% url 'editProject' project.id %}">Edit</a>
+<a class = "btn btn-danger" href="{% url 'deleteProject' project.id %}">Delete</a>
+{%endif%}
+<hr>
+<p>{{project.body|safe}}</p>
+
+</div>
+
+{% endblock content %}
